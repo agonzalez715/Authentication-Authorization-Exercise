@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Update Feedback{% endblock %}
+
+{% block content %}
+  <h2>Update Feedback</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.title.label }}
+      {{ form.title(class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.content.label }}
+      {{ form.content(class_="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Update Feedback</button>
+  </form>
+{% endblock %}
